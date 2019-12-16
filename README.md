@@ -1,6 +1,6 @@
 # **tf-module-app_autoscaling_target**
 
-Módulo Terraform para criação de App Auto Scaling Target ***EC2 SPOT***.
+Módulo Terraform para criação de App Auto Scaling Target para instâncias ***EC2 SPOT***.
 
  **Requisitos**
  - Terraform
@@ -10,11 +10,11 @@ Módulo Terraform para criação de App Auto Scaling Target ***EC2 SPOT***.
  - Launch Template
  - AWS Spot Fleet Request
 
- **Criando App Auto Scaling Policy**
+ **Exemplo de Uso**
  ------
 ```
-module "app_autoscaling_policy" {
-  source = "../appAutoscalingPolicy"
+module "app_autoscaling_target" {
+  source = "https://github.com/leandromoreirati/tf-module-app_autoscaling_target.git"
 
   name       = "${var.my_team}-${var.product}-${var.environment}"
 
